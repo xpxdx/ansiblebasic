@@ -10,3 +10,4 @@
 2024-07-24 15:25:42,535 p=1243740 u=dimanator n=ansible | 192.168.2.71               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 2024-07-24 15:25:42,535 p=1243740 u=dimanator n=ansible | 192.168.2.81               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 2024-07-24 16:45:27,392 p=1247339 u=dimanator n=ansible | ERROR! the playbook: /home/dimanator/code/ansiblebasic/winping could not be found
+2024-07-25 07:02:00,408 p=1283057 u=dimanator n=ansible | playbook: /home/dimanator/code/ansiblebasic/chocoinstallzip.yml
