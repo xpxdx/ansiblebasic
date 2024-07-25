@@ -1,0 +1,12 @@
+---
+- name: Deploy bundle
+  hosts: all
+  gather_facts: off
+  vars:
+    file_version: 2023.05.09
+
+  tasks:
+  - name: Unzip bundle
+    ansible.windows.win_command: powershell.exe -
+    args: 
+      stdin: Expand-Archive -Path "C:\downloads\rel.{{ file_version }}.zip" -DestinationPath "C:\deployment\{{ file_version }}"

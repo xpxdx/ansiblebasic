@@ -54,3 +54,276 @@
 2024-07-25 07:25:32,378 p=1284783 u=dimanator n=ansible | PLAY RECAP ****************************************************************************************************************
 2024-07-25 07:25:32,379 p=1284783 u=dimanator n=ansible | 192.168.2.71               : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 2024-07-25 07:25:32,380 p=1284783 u=dimanator n=ansible | 192.168.2.81               : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-07-25 14:48:42,578 p=1304958 u=dimanator n=ansible | playbook: /home/dimanator/code/ansiblebasic/service.yml
+2024-07-25 14:49:13,648 p=1305028 u=dimanator n=ansible | PLAY [Deploy bundle] ********************************************************************************************************************************************************
+2024-07-25 14:49:13,803 p=1305028 u=dimanator n=ansible | TASK [Copy zip] *************************************************************************************************************************************************************
+2024-07-25 14:49:13,870 p=1305028 u=dimanator n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: If you are using a module and expect the file to exist on the remote, see the remote_src option
+2024-07-25 14:49:13,873 p=1305028 u=dimanator n=ansible | fatal: [192.168.2.71]: FAILED! => {"changed": false, "dest": "C:\\deployment\\", "msg": "Could not find or access 'C:\\downloads\\rel.2023.05.09.zip'\nSearched in:\n\t/home/dimanator/code/ansiblebasic/files/C:\\downloads\\rel.2023.05.09.zip\n\t/home/dimanator/code/ansiblebasic/C:\\downloads\\rel.2023.05.09.zip\n\t/home/dimanator/code/ansiblebasic/files/C:\\downloads\\rel.2023.05.09.zip\n\t/home/dimanator/code/ansiblebasic/C:\\downloads\\rel.2023.05.09.zip on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option", "src": "C:\\downloads\\rel.2023.05.09.zip"}
+2024-07-25 14:49:13,888 p=1305028 u=dimanator n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: If you are using a module and expect the file to exist on the remote, see the remote_src option
+2024-07-25 14:49:13,889 p=1305028 u=dimanator n=ansible | fatal: [192.168.2.81]: FAILED! => {"changed": false, "dest": "C:\\deployment\\", "msg": "Could not find or access 'C:\\downloads\\rel.2023.05.09.zip'\nSearched in:\n\t/home/dimanator/code/ansiblebasic/files/C:\\downloads\\rel.2023.05.09.zip\n\t/home/dimanator/code/ansiblebasic/C:\\downloads\\rel.2023.05.09.zip\n\t/home/dimanator/code/ansiblebasic/files/C:\\downloads\\rel.2023.05.09.zip\n\t/home/dimanator/code/ansiblebasic/C:\\downloads\\rel.2023.05.09.zip on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option", "src": "C:\\downloads\\rel.2023.05.09.zip"}
+2024-07-25 14:49:13,893 p=1305028 u=dimanator n=ansible | PLAY RECAP ******************************************************************************************************************************************************************
+2024-07-25 14:49:13,895 p=1305028 u=dimanator n=ansible | 192.168.2.71               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-07-25 14:49:13,898 p=1305028 u=dimanator n=ansible | 192.168.2.81               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-07-25 14:49:23,256 p=1305074 u=dimanator n=ansible | ansible-playbook [core 2.14.14]
+  config file = /home/dimanator/code/ansiblebasic/ansible.cfg
+  configured module search path = ['/home/dimanator/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3.9/site-packages/ansible
+  ansible collection location = /home/dimanator/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/bin/ansible-playbook
+  python version = 3.9.18 (main, May 16 2024, 00:00:00) [GCC 11.4.1 20231218 (Red Hat 11.4.1-3)] (/usr/bin/python3)
+  jinja version = 3.1.2
+  libyaml = True
+2024-07-25 14:49:23,257 p=1305074 u=dimanator n=ansible | Using /home/dimanator/code/ansiblebasic/ansible.cfg as config file
+2024-07-25 14:49:23,277 p=1305074 u=dimanator n=ansible | host_list declined parsing /home/dimanator/code/ansiblebasic/hosts as it did not pass its verify_file() method
+2024-07-25 14:49:23,278 p=1305074 u=dimanator n=ansible | script declined parsing /home/dimanator/code/ansiblebasic/hosts as it did not pass its verify_file() method
+2024-07-25 14:49:23,278 p=1305074 u=dimanator n=ansible | auto declined parsing /home/dimanator/code/ansiblebasic/hosts as it did not pass its verify_file() method
+2024-07-25 14:49:23,284 p=1305074 u=dimanator n=ansible | Parsed /home/dimanator/code/ansiblebasic/hosts inventory source with ini plugin
+2024-07-25 14:49:23,634 p=1305074 u=dimanator n=ansible | Skipping callback 'default', as we already have a stdout callback.
+2024-07-25 14:49:23,635 p=1305074 u=dimanator n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2024-07-25 14:49:23,636 p=1305074 u=dimanator n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2024-07-25 14:49:23,636 p=1305074 u=dimanator n=ansible | PLAYBOOK: service.yml *******************************************************************************************************************************************************
+2024-07-25 14:49:23,637 p=1305074 u=dimanator n=ansible | 1 plays in service.yml
+2024-07-25 14:49:23,641 p=1305074 u=dimanator n=ansible | PLAY [Deploy bundle] ********************************************************************************************************************************************************
+2024-07-25 14:49:23,754 p=1305074 u=dimanator n=ansible | TASK [Copy zip] *************************************************************************************************************************************************************
+2024-07-25 14:49:23,827 p=1305074 u=dimanator n=ansible | The full traceback is:
+Traceback (most recent call last):
+  File "/home/dimanator/.ansible/collections/ansible_collections/ansible/windows/plugins/action/win_copy.py", line 404, in run
+    source = self._find_needle('files', source)
+  File "/usr/lib/python3.9/site-packages/ansible/plugins/action/__init__.py", line 1431, in _find_needle
+    return self._loader.path_dwim_relative_stack(path_stack, dirname, needle)
+  File "/usr/lib/python3.9/site-packages/ansible/parsing/dataloader.py", line 341, in path_dwim_relative_stack
+    raise AnsibleFileNotFound(file_name=source, paths=[to_native(p) for p in search])
+ansible.errors.AnsibleFileNotFound: Could not find or access 'C:\downloads\rel.2023.05.09.zip'
+Searched in:
+	/home/dimanator/code/ansiblebasic/files/C:\downloads\rel.2023.05.09.zip
+	/home/dimanator/code/ansiblebasic/C:\downloads\rel.2023.05.09.zip
+	/home/dimanator/code/ansiblebasic/files/C:\downloads\rel.2023.05.09.zip
+	/home/dimanator/code/ansiblebasic/C:\downloads\rel.2023.05.09.zip on the Ansible Controller.
+If you are using a module and expect the file to exist on the remote, see the remote_src option
+
+2024-07-25 14:49:23,829 p=1305074 u=dimanator n=ansible | fatal: [192.168.2.71]: FAILED! => {
+    "changed": false,
+    "dest": "C:\\deployment\\",
+    "msg": "Could not find or access 'C:\\downloads\\rel.2023.05.09.zip'\nSearched in:\n\t/home/dimanator/code/ansiblebasic/files/C:\\downloads\\rel.2023.05.09.zip\n\t/home/dimanator/code/ansiblebasic/C:\\downloads\\rel.2023.05.09.zip\n\t/home/dimanator/code/ansiblebasic/files/C:\\downloads\\rel.2023.05.09.zip\n\t/home/dimanator/code/ansiblebasic/C:\\downloads\\rel.2023.05.09.zip on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option",
+    "src": "C:\\downloads\\rel.2023.05.09.zip"
+}
+2024-07-25 14:49:23,835 p=1305074 u=dimanator n=ansible | The full traceback is:
+Traceback (most recent call last):
+  File "/home/dimanator/.ansible/collections/ansible_collections/ansible/windows/plugins/action/win_copy.py", line 404, in run
+    source = self._find_needle('files', source)
+  File "/usr/lib/python3.9/site-packages/ansible/plugins/action/__init__.py", line 1431, in _find_needle
+    return self._loader.path_dwim_relative_stack(path_stack, dirname, needle)
+  File "/usr/lib/python3.9/site-packages/ansible/parsing/dataloader.py", line 341, in path_dwim_relative_stack
+    raise AnsibleFileNotFound(file_name=source, paths=[to_native(p) for p in search])
+ansible.errors.AnsibleFileNotFound: Could not find or access 'C:\downloads\rel.2023.05.09.zip'
+Searched in:
+	/home/dimanator/code/ansiblebasic/files/C:\downloads\rel.2023.05.09.zip
+	/home/dimanator/code/ansiblebasic/C:\downloads\rel.2023.05.09.zip
+	/home/dimanator/code/ansiblebasic/files/C:\downloads\rel.2023.05.09.zip
+	/home/dimanator/code/ansiblebasic/C:\downloads\rel.2023.05.09.zip on the Ansible Controller.
+If you are using a module and expect the file to exist on the remote, see the remote_src option
+
+2024-07-25 14:49:23,836 p=1305074 u=dimanator n=ansible | fatal: [192.168.2.81]: FAILED! => {
+    "changed": false,
+    "dest": "C:\\deployment\\",
+    "msg": "Could not find or access 'C:\\downloads\\rel.2023.05.09.zip'\nSearched in:\n\t/home/dimanator/code/ansiblebasic/files/C:\\downloads\\rel.2023.05.09.zip\n\t/home/dimanator/code/ansiblebasic/C:\\downloads\\rel.2023.05.09.zip\n\t/home/dimanator/code/ansiblebasic/files/C:\\downloads\\rel.2023.05.09.zip\n\t/home/dimanator/code/ansiblebasic/C:\\downloads\\rel.2023.05.09.zip on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option",
+    "src": "C:\\downloads\\rel.2023.05.09.zip"
+}
+2024-07-25 14:49:23,841 p=1305074 u=dimanator n=ansible | PLAY RECAP ******************************************************************************************************************************************************************
+2024-07-25 14:49:23,841 p=1305074 u=dimanator n=ansible | 192.168.2.71               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-07-25 14:49:23,843 p=1305074 u=dimanator n=ansible | 192.168.2.81               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-07-25 14:51:36,267 p=1305217 u=dimanator n=ansible | playbook: /home/dimanator/code/ansiblebasic/service.yml
+2024-07-25 14:51:41,846 p=1305233 u=dimanator n=ansible | ansible-playbook [core 2.14.14]
+  config file = /home/dimanator/code/ansiblebasic/ansible.cfg
+  configured module search path = ['/home/dimanator/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3.9/site-packages/ansible
+  ansible collection location = /home/dimanator/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/bin/ansible-playbook
+  python version = 3.9.18 (main, May 16 2024, 00:00:00) [GCC 11.4.1 20231218 (Red Hat 11.4.1-3)] (/usr/bin/python3)
+  jinja version = 3.1.2
+  libyaml = True
+2024-07-25 14:51:41,847 p=1305233 u=dimanator n=ansible | Using /home/dimanator/code/ansiblebasic/ansible.cfg as config file
+2024-07-25 14:51:41,861 p=1305233 u=dimanator n=ansible | host_list declined parsing /home/dimanator/code/ansiblebasic/hosts as it did not pass its verify_file() method
+2024-07-25 14:51:41,862 p=1305233 u=dimanator n=ansible | script declined parsing /home/dimanator/code/ansiblebasic/hosts as it did not pass its verify_file() method
+2024-07-25 14:51:41,862 p=1305233 u=dimanator n=ansible | auto declined parsing /home/dimanator/code/ansiblebasic/hosts as it did not pass its verify_file() method
+2024-07-25 14:51:41,869 p=1305233 u=dimanator n=ansible | Parsed /home/dimanator/code/ansiblebasic/hosts inventory source with ini plugin
+2024-07-25 14:51:42,226 p=1305233 u=dimanator n=ansible | Skipping callback 'default', as we already have a stdout callback.
+2024-07-25 14:51:42,227 p=1305233 u=dimanator n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2024-07-25 14:51:42,227 p=1305233 u=dimanator n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2024-07-25 14:51:42,228 p=1305233 u=dimanator n=ansible | PLAYBOOK: service.yml *******************************************************************************************************************************************************
+2024-07-25 14:51:42,228 p=1305233 u=dimanator n=ansible | 1 plays in service.yml
+2024-07-25 14:51:42,231 p=1305233 u=dimanator n=ansible | PLAY [Deploy bundle] ********************************************************************************************************************************************************
+2024-07-25 14:51:42,336 p=1305233 u=dimanator n=ansible | TASK [Unzip folder] *********************************************************************************************************************************************************
+2024-07-25 14:51:42,426 p=1305233 u=dimanator n=ansible | Using module file /home/dimanator/.ansible/collections/ansible_collections/ansible/windows/plugins/modules/win_command.ps1
+2024-07-25 14:51:42,435 p=1305233 u=dimanator n=ansible | Pipelining is enabled.
+2024-07-25 14:51:42,436 p=1305233 u=dimanator n=ansible | <192.168.2.71> ESTABLISH WINRM CONNECTION FOR USER: dimanator on PORT 5985 TO 192.168.2.71
+2024-07-25 14:51:42,443 p=1305233 u=dimanator n=ansible | Using module file /home/dimanator/.ansible/collections/ansible_collections/ansible/windows/plugins/modules/win_command.ps1
+2024-07-25 14:51:42,448 p=1305233 u=dimanator n=ansible | Pipelining is enabled.
+2024-07-25 14:51:42,455 p=1305233 u=dimanator n=ansible | <192.168.2.81> ESTABLISH WINRM CONNECTION FOR USER: dimanator on PORT 5985 TO 192.168.2.81
+2024-07-25 14:51:42,530 p=1305233 u=dimanator n=ansible | EXEC (via pipeline wrapper)
+2024-07-25 14:51:42,552 p=1305233 u=dimanator n=ansible | EXEC (via pipeline wrapper)
+2024-07-25 14:51:44,144 p=1305233 u=dimanator n=ansible | fatal: [192.168.2.81]: FAILED! => {
+    "changed": true,
+    "cmd": "powershell.exe -",
+    "delta": "0:00:00.438166",
+    "end": "2024-07-25 18:51:44.049741",
+    "invocation": {
+        "module_args": {
+            "_raw_params": "powershell.exe -",
+            "argv": null,
+            "chdir": null,
+            "cmd": null,
+            "creates": null,
+            "output_encoding_override": null,
+            "removes": null,
+            "stdin": "Expand-Archive -Path \"C:\\deployment\\rel.2023.05.09.zip\" -DestinationPath \"C:\\deployment\\2023.05.09\""
+        }
+    },
+    "msg": "non-zero return code",
+    "rc": 1,
+    "start": "2024-07-25 18:51:43.611574",
+    "stderr": "Expand-Archive : The path 'C:\\deployment\\rel.2023.05.09.zip' either does not exist or is not a valid file system path.\r\nAt line:1 char:1\r\n+ Expand-Archive -Path \"C:\\deployment\\rel.2023.05.09.zip\" -DestinationP ...\r\n+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : InvalidArgument: (C:\\deployment\\rel.2023.05.09.zip:String) [Expand-Archive], InvalidOper \r\n   ationException\r\n    + FullyQualifiedErrorId : ArchiveCmdletPathNotFound,Expand-Archive\r\n \r\n",
+    "stderr_lines": [
+        "Expand-Archive : The path 'C:\\deployment\\rel.2023.05.09.zip' either does not exist or is not a valid file system path.",
+        "At line:1 char:1",
+        "+ Expand-Archive -Path \"C:\\deployment\\rel.2023.05.09.zip\" -DestinationP ...",
+        "+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+        "    + CategoryInfo          : InvalidArgument: (C:\\deployment\\rel.2023.05.09.zip:String) [Expand-Archive], InvalidOper ",
+        "   ationException",
+        "    + FullyQualifiedErrorId : ArchiveCmdletPathNotFound,Expand-Archive",
+        " "
+    ],
+    "stdout": "",
+    "stdout_lines": []
+}
+2024-07-25 14:53:08,514 p=1305233 u=dimanator n=ansible | changed: [192.168.2.71] => {
+    "changed": true,
+    "cmd": "powershell.exe -",
+    "delta": "0:01:24.816777",
+    "end": "2024-07-25 18:52:49.218588",
+    "invocation": {
+        "module_args": {
+            "_raw_params": "powershell.exe -",
+            "argv": null,
+            "chdir": null,
+            "cmd": null,
+            "creates": null,
+            "output_encoding_override": null,
+            "removes": null,
+            "stdin": "Expand-Archive -Path \"C:\\deployment\\rel.2023.05.09.zip\" -DestinationPath \"C:\\deployment\\2023.05.09\""
+        }
+    },
+    "rc": 0,
+    "start": "2024-07-25 18:51:24.401811",
+    "stderr": "",
+    "stderr_lines": [],
+    "stdout": "",
+    "stdout_lines": []
+}
+2024-07-25 14:53:08,541 p=1305233 u=dimanator n=ansible | PLAY RECAP ******************************************************************************************************************************************************************
+2024-07-25 14:53:08,541 p=1305233 u=dimanator n=ansible | 192.168.2.71               : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-07-25 14:53:08,542 p=1305233 u=dimanator n=ansible | 192.168.2.81               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-07-25 14:54:34,785 p=1305489 u=dimanator n=ansible | ansible-playbook [core 2.14.14]
+  config file = /home/dimanator/code/ansiblebasic/ansible.cfg
+  configured module search path = ['/home/dimanator/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3.9/site-packages/ansible
+  ansible collection location = /home/dimanator/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/bin/ansible-playbook
+  python version = 3.9.18 (main, May 16 2024, 00:00:00) [GCC 11.4.1 20231218 (Red Hat 11.4.1-3)] (/usr/bin/python3)
+  jinja version = 3.1.2
+  libyaml = True
+2024-07-25 14:54:34,786 p=1305489 u=dimanator n=ansible | Using /home/dimanator/code/ansiblebasic/ansible.cfg as config file
+2024-07-25 14:54:34,800 p=1305489 u=dimanator n=ansible | host_list declined parsing /home/dimanator/code/ansiblebasic/hosts as it did not pass its verify_file() method
+2024-07-25 14:54:34,801 p=1305489 u=dimanator n=ansible | script declined parsing /home/dimanator/code/ansiblebasic/hosts as it did not pass its verify_file() method
+2024-07-25 14:54:34,802 p=1305489 u=dimanator n=ansible | auto declined parsing /home/dimanator/code/ansiblebasic/hosts as it did not pass its verify_file() method
+2024-07-25 14:54:34,807 p=1305489 u=dimanator n=ansible | Parsed /home/dimanator/code/ansiblebasic/hosts inventory source with ini plugin
+2024-07-25 14:54:35,188 p=1305489 u=dimanator n=ansible | Skipping callback 'default', as we already have a stdout callback.
+2024-07-25 14:54:35,188 p=1305489 u=dimanator n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2024-07-25 14:54:35,188 p=1305489 u=dimanator n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2024-07-25 14:54:35,189 p=1305489 u=dimanator n=ansible | PLAYBOOK: service.yml *******************************************************************************************************************************************************
+2024-07-25 14:54:35,189 p=1305489 u=dimanator n=ansible | 1 plays in service.yml
+2024-07-25 14:54:35,192 p=1305489 u=dimanator n=ansible | PLAY [Deploy bundle] ********************************************************************************************************************************************************
+2024-07-25 14:54:35,277 p=1305489 u=dimanator n=ansible | TASK [Unzip folder] *********************************************************************************************************************************************************
+2024-07-25 14:54:35,350 p=1305489 u=dimanator n=ansible | Using module file /home/dimanator/.ansible/collections/ansible_collections/ansible/windows/plugins/modules/win_command.ps1
+2024-07-25 14:54:35,351 p=1305489 u=dimanator n=ansible | Pipelining is enabled.
+2024-07-25 14:54:35,356 p=1305489 u=dimanator n=ansible | <192.168.2.71> ESTABLISH WINRM CONNECTION FOR USER: dimanator on PORT 5985 TO 192.168.2.71
+2024-07-25 14:54:35,428 p=1305489 u=dimanator n=ansible | EXEC (via pipeline wrapper)
+2024-07-25 14:55:57,376 p=1305489 u=dimanator n=ansible | changed: [192.168.2.71] => {
+    "changed": true,
+    "cmd": "powershell.exe -",
+    "delta": "0:01:21.107480",
+    "end": "2024-07-25 18:55:38.092247",
+    "invocation": {
+        "module_args": {
+            "_raw_params": "powershell.exe -",
+            "argv": null,
+            "chdir": null,
+            "cmd": null,
+            "creates": null,
+            "output_encoding_override": null,
+            "removes": null,
+            "stdin": "Expand-Archive -Path \"C:\\deployment\\rel.2023.05.09.zip\" -DestinationPath \"C:\\deployment\\2023.05.09\""
+        }
+    },
+    "rc": 0,
+    "start": "2024-07-25 18:54:16.984766",
+    "stderr": "",
+    "stderr_lines": [],
+    "stdout": "",
+    "stdout_lines": []
+}
+2024-07-25 14:55:57,401 p=1305489 u=dimanator n=ansible | PLAY RECAP ******************************************************************************************************************************************************************
+2024-07-25 14:55:57,402 p=1305489 u=dimanator n=ansible | 192.168.2.71               : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-07-25 14:56:59,436 p=1305686 u=dimanator n=ansible | playbook: /home/dimanator/code/ansiblebasic/service.yml
+2024-07-25 14:57:29,862 p=1305741 u=dimanator n=ansible | playbook: /home/dimanator/code/ansiblebasic/service.yml
+2024-07-25 14:57:36,789 p=1305762 u=dimanator n=ansible | ansible-playbook [core 2.14.14]
+  config file = /home/dimanator/code/ansiblebasic/ansible.cfg
+  configured module search path = ['/home/dimanator/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3.9/site-packages/ansible
+  ansible collection location = /home/dimanator/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/bin/ansible-playbook
+  python version = 3.9.18 (main, May 16 2024, 00:00:00) [GCC 11.4.1 20231218 (Red Hat 11.4.1-3)] (/usr/bin/python3)
+  jinja version = 3.1.2
+  libyaml = True
+2024-07-25 14:57:36,789 p=1305762 u=dimanator n=ansible | Using /home/dimanator/code/ansiblebasic/ansible.cfg as config file
+2024-07-25 14:57:36,800 p=1305762 u=dimanator n=ansible | host_list declined parsing /home/dimanator/code/ansiblebasic/hosts as it did not pass its verify_file() method
+2024-07-25 14:57:36,800 p=1305762 u=dimanator n=ansible | script declined parsing /home/dimanator/code/ansiblebasic/hosts as it did not pass its verify_file() method
+2024-07-25 14:57:36,800 p=1305762 u=dimanator n=ansible | auto declined parsing /home/dimanator/code/ansiblebasic/hosts as it did not pass its verify_file() method
+2024-07-25 14:57:36,804 p=1305762 u=dimanator n=ansible | Parsed /home/dimanator/code/ansiblebasic/hosts inventory source with ini plugin
+2024-07-25 14:57:37,112 p=1305762 u=dimanator n=ansible | Skipping callback 'default', as we already have a stdout callback.
+2024-07-25 14:57:37,113 p=1305762 u=dimanator n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2024-07-25 14:57:37,113 p=1305762 u=dimanator n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2024-07-25 14:57:37,114 p=1305762 u=dimanator n=ansible | PLAYBOOK: service.yml *******************************************************************************************************************************************************
+2024-07-25 14:57:37,114 p=1305762 u=dimanator n=ansible | 1 plays in service.yml
+2024-07-25 14:57:37,117 p=1305762 u=dimanator n=ansible | PLAY [Deploy bundle] ********************************************************************************************************************************************************
+2024-07-25 14:57:37,199 p=1305762 u=dimanator n=ansible | TASK [Unzip bundle] *********************************************************************************************************************************************************
+2024-07-25 14:57:37,266 p=1305762 u=dimanator n=ansible | Using module file /home/dimanator/.ansible/collections/ansible_collections/ansible/windows/plugins/modules/win_command.ps1
+2024-07-25 14:57:37,267 p=1305762 u=dimanator n=ansible | Pipelining is enabled.
+2024-07-25 14:57:37,275 p=1305762 u=dimanator n=ansible | <192.168.2.71> ESTABLISH WINRM CONNECTION FOR USER: dimanator on PORT 5985 TO 192.168.2.71
+2024-07-25 14:57:37,344 p=1305762 u=dimanator n=ansible | EXEC (via pipeline wrapper)
+2024-07-25 14:58:58,441 p=1305762 u=dimanator n=ansible | changed: [192.168.2.71] => {
+    "changed": true,
+    "cmd": "powershell.exe -",
+    "delta": "0:01:20.210833",
+    "end": "2024-07-25 18:58:39.149228",
+    "invocation": {
+        "module_args": {
+            "_raw_params": "powershell.exe -",
+            "argv": null,
+            "chdir": null,
+            "cmd": null,
+            "creates": null,
+            "output_encoding_override": null,
+            "removes": null,
+            "stdin": "Expand-Archive -Path \"C:\\downloads\\rel.2023.05.09.zip\" -DestinationPath \"C:\\deployment\\2023.05.09\""
+        }
+    },
+    "rc": 0,
+    "start": "2024-07-25 18:57:18.938395",
+    "stderr": "",
+    "stderr_lines": [],
+    "stdout": "",
+    "stdout_lines": []
+}
+2024-07-25 14:58:58,473 p=1305762 u=dimanator n=ansible | PLAY RECAP ******************************************************************************************************************************************************************
+2024-07-25 14:58:58,474 p=1305762 u=dimanator n=ansible | 192.168.2.71               : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
