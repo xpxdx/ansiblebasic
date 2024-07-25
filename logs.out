@@ -1,0 +1,12 @@
+2024-07-24 14:47:52,144 p=1241533 u=dimanator n=ansible | playbook: /home/dimanator/code/ansiblebasic/winping.yml
+2024-07-24 15:25:39,156 p=1243740 u=dimanator n=ansible | PLAY [all] ***************************************************************************************************************
+2024-07-24 15:25:39,282 p=1243740 u=dimanator n=ansible | TASK [Gathering Facts] ***************************************************************************************************
+2024-07-24 15:25:41,255 p=1243740 u=dimanator n=ansible | ok: [192.168.2.71]
+2024-07-24 15:25:41,310 p=1243740 u=dimanator n=ansible | ok: [192.168.2.81]
+2024-07-24 15:25:41,369 p=1243740 u=dimanator n=ansible | TASK [Example from an Ansible Playbook] **********************************************************************************
+2024-07-24 15:25:42,314 p=1243740 u=dimanator n=ansible | ok: [192.168.2.71]
+2024-07-24 15:25:42,469 p=1243740 u=dimanator n=ansible | ok: [192.168.2.81]
+2024-07-24 15:25:42,534 p=1243740 u=dimanator n=ansible | PLAY RECAP ***************************************************************************************************************
+2024-07-24 15:25:42,535 p=1243740 u=dimanator n=ansible | 192.168.2.71               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-07-24 15:25:42,535 p=1243740 u=dimanator n=ansible | 192.168.2.81               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-07-24 16:45:27,392 p=1247339 u=dimanator n=ansible | ERROR! the playbook: /home/dimanator/code/ansiblebasic/winping could not be found

@@ -1,0 +1,6 @@
+collections:
+  - name: junipernetworks.junos
+    source: https://galaxy.ansible.com
+
+  - name: chocolatey.chocolatey.win_chocolatey
+    source: https://galaxy.ansible.com
