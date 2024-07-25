@@ -11,3 +11,46 @@
 2024-07-24 15:25:42,535 p=1243740 u=dimanator n=ansible | 192.168.2.81               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 2024-07-24 16:45:27,392 p=1247339 u=dimanator n=ansible | ERROR! the playbook: /home/dimanator/code/ansiblebasic/winping could not be found
 2024-07-25 07:02:00,408 p=1283057 u=dimanator n=ansible | playbook: /home/dimanator/code/ansiblebasic/chocoinstallzip.yml
+2024-07-25 07:22:46,824 p=1284462 u=dimanator n=ansible | ERROR! the playbook: /home/dimanator/code/ansiblebasic/winping could not be found
+2024-07-25 07:23:05,055 p=1284501 u=dimanator n=ansible | playbook: /home/dimanator/code/ansiblebasic/winstat.yml
+2024-07-25 07:23:35,010 p=1284540 u=dimanator n=ansible | playbook: /home/dimanator/code/ansiblebasic/winstat.yml
+2024-07-25 07:24:12,506 p=1284629 u=dimanator n=ansible | PLAY [all] ****************************************************************************************************************
+2024-07-25 07:24:12,592 p=1284629 u=dimanator n=ansible | TASK [Gathering Facts] ****************************************************************************************************
+2024-07-25 07:24:14,369 p=1284629 u=dimanator n=ansible | ok: [192.168.2.71]
+2024-07-25 07:24:14,460 p=1284629 u=dimanator n=ansible | ok: [192.168.2.81]
+2024-07-25 07:24:14,497 p=1284629 u=dimanator n=ansible | TASK [Obtain information about a file] ************************************************************************************
+2024-07-25 07:24:15,765 p=1284629 u=dimanator n=ansible | ok: [192.168.2.71]
+2024-07-25 07:24:15,815 p=1284629 u=dimanator n=ansible | ok: [192.168.2.81]
+2024-07-25 07:24:15,894 p=1284629 u=dimanator n=ansible | PLAY RECAP ****************************************************************************************************************
+2024-07-25 07:24:15,895 p=1284629 u=dimanator n=ansible | 192.168.2.71               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-07-25 07:24:15,896 p=1284629 u=dimanator n=ansible | 192.168.2.81               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-07-25 07:25:23,202 p=1284767 u=dimanator n=ansible | playbook: /home/dimanator/code/ansiblebasic/winstat.yml
+2024-07-25 07:25:28,648 p=1284783 u=dimanator n=ansible | PLAY [all] ****************************************************************************************************************
+2024-07-25 07:25:28,669 p=1284783 u=dimanator n=ansible | TASK [Gathering Facts] ****************************************************************************************************
+2024-07-25 07:25:30,496 p=1284783 u=dimanator n=ansible | ok: [192.168.2.71]
+2024-07-25 07:25:30,596 p=1284783 u=dimanator n=ansible | ok: [192.168.2.81]
+2024-07-25 07:25:30,638 p=1284783 u=dimanator n=ansible | TASK [Obtain information about a file] ************************************************************************************
+2024-07-25 07:25:32,005 p=1284783 u=dimanator n=ansible | ok: [192.168.2.71]
+2024-07-25 07:25:32,070 p=1284783 u=dimanator n=ansible | ok: [192.168.2.81]
+2024-07-25 07:25:32,099 p=1284783 u=dimanator n=ansible | TASK [debug] **************************************************************************************************************
+2024-07-25 07:25:32,194 p=1284783 u=dimanator n=ansible | ok: [192.168.2.71] => {
+    "file_info": {
+        "changed": false,
+        "failed": false,
+        "stat": {
+            "exists": false
+        }
+    }
+}
+2024-07-25 07:25:32,215 p=1284783 u=dimanator n=ansible | ok: [192.168.2.81] => {
+    "file_info": {
+        "changed": false,
+        "failed": false,
+        "stat": {
+            "exists": false
+        }
+    }
+}
+2024-07-25 07:25:32,378 p=1284783 u=dimanator n=ansible | PLAY RECAP ****************************************************************************************************************
+2024-07-25 07:25:32,379 p=1284783 u=dimanator n=ansible | 192.168.2.71               : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-07-25 07:25:32,380 p=1284783 u=dimanator n=ansible | 192.168.2.81               : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

@@ -1,0 +1,9 @@
+- hosts: all
+  tasks:
+    - name: Obtain information about a file
+      ansible.windows.win_stat:
+        path: C:\foo.ini
+      register: file_info
+
+    - debug:
+        var: file_info
