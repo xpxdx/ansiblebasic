@@ -328,3 +328,231 @@ If you are using a module and expect the file to exist on the remote, see the re
 2024-07-25 14:58:58,473 p=1305762 u=dimanator n=ansible | PLAY RECAP ******************************************************************************************************************************************************************
 2024-07-25 14:58:58,474 p=1305762 u=dimanator n=ansible | 192.168.2.71               : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 2024-07-26 06:41:57,038 p=1348667 u=dimanator n=ansible | playbook: /home/dimanator/code/ansiblebasic/service.yml
+2024-07-26 07:05:08,233 p=1349805 u=dimanator n=ansible | ERROR! Invalid variable name in vars specified for Play: 'registry-username' is not a valid variable name
+
+The error appears to be in '/home/dimanator/code/ansiblebasic/service.yml': line 6, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  vars:
+    file_version: 2023.05.09
+    ^ here
+
+2024-07-26 07:05:40,268 p=1349856 u=dimanator n=ansible | playbook: /home/dimanator/code/ansiblebasic/service.yml
+2024-07-26 07:06:00,292 p=1349877 u=dimanator n=ansible | playbook: /home/dimanator/code/ansiblebasic/service.yml
+2024-07-26 07:06:13,845 p=1349913 u=dimanator n=ansible | playbook: /home/dimanator/code/ansiblebasic/service.yml
+2024-07-26 07:07:29,671 p=1349972 u=dimanator n=ansible | playbook: /home/dimanator/code/ansiblebasic/service.yml
+2024-07-26 07:08:43,541 p=1350029 u=dimanator n=ansible | playbook: /home/dimanator/code/ansiblebasic/service.yml
+2024-07-26 07:09:16,000 p=1350076 u=dimanator n=ansible | playbook: /home/dimanator/code/ansiblebasic/service.yml
+2024-07-26 07:09:16,667 p=1350081 u=dimanator n=ansible | playbook: /home/dimanator/code/ansiblebasic/service.yml
+2024-07-26 07:17:03,088 p=1350455 u=dimanator n=ansible | playbook: /home/dimanator/code/ansiblebasic/service.yml
+2024-07-26 07:19:17,480 p=1350567 u=dimanator n=ansible | playbook: /home/dimanator/code/ansiblebasic/service.yml
+2024-07-26 07:19:44,737 p=1350626 u=dimanator n=ansible | ansible-playbook [core 2.14.14]
+  config file = /home/dimanator/code/ansiblebasic/ansible.cfg
+  configured module search path = ['/home/dimanator/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3.9/site-packages/ansible
+  ansible collection location = /home/dimanator/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/bin/ansible-playbook
+  python version = 3.9.18 (main, May 16 2024, 00:00:00) [GCC 11.4.1 20231218 (Red Hat 11.4.1-3)] (/usr/bin/python3)
+  jinja version = 3.1.2
+  libyaml = True
+2024-07-26 07:19:44,738 p=1350626 u=dimanator n=ansible | Using /home/dimanator/code/ansiblebasic/ansible.cfg as config file
+2024-07-26 07:19:44,749 p=1350626 u=dimanator n=ansible | host_list declined parsing /home/dimanator/code/ansiblebasic/hosts as it did not pass its verify_file() method
+2024-07-26 07:19:44,749 p=1350626 u=dimanator n=ansible | script declined parsing /home/dimanator/code/ansiblebasic/hosts as it did not pass its verify_file() method
+2024-07-26 07:19:44,750 p=1350626 u=dimanator n=ansible | auto declined parsing /home/dimanator/code/ansiblebasic/hosts as it did not pass its verify_file() method
+2024-07-26 07:19:44,755 p=1350626 u=dimanator n=ansible | Parsed /home/dimanator/code/ansiblebasic/hosts inventory source with ini plugin
+2024-07-26 07:19:45,073 p=1350626 u=dimanator n=ansible | Skipping callback 'default', as we already have a stdout callback.
+2024-07-26 07:19:45,074 p=1350626 u=dimanator n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2024-07-26 07:19:45,074 p=1350626 u=dimanator n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2024-07-26 07:19:45,074 p=1350626 u=dimanator n=ansible | PLAYBOOK: service.yml *****************************************************************************************************************************************************************************
+2024-07-26 07:19:45,075 p=1350626 u=dimanator n=ansible | 1 plays in service.yml
+2024-07-26 07:19:45,078 p=1350626 u=dimanator n=ansible | PLAY [Deploy bundle] ******************************************************************************************************************************************************************************
+2024-07-26 07:19:45,210 p=1350626 u=dimanator n=ansible | TASK [Pull registry bundle] ***********************************************************************************************************************************************************************
+2024-07-26 07:19:45,290 p=1350626 u=dimanator n=ansible | Using module file /home/dimanator/.ansible/collections/ansible_collections/ansible/windows/plugins/modules/win_command.ps1
+2024-07-26 07:19:45,292 p=1350626 u=dimanator n=ansible | Pipelining is enabled.
+2024-07-26 07:19:45,299 p=1350626 u=dimanator n=ansible | <192.168.2.71> ESTABLISH WINRM CONNECTION FOR USER: dimanator on PORT 5985 TO 192.168.2.71
+2024-07-26 07:19:45,380 p=1350626 u=dimanator n=ansible | EXEC (via pipeline wrapper)
+2024-07-26 07:27:36,725 p=1350626 u=dimanator n=ansible | changed: [192.168.2.71] => {
+    "changed": true,
+    "cmd": "powershell.exe -",
+    "delta": "0:07:50.486529",
+    "end": "2024-07-26 11:27:16.437580",
+    "invocation": {
+        "module_args": {
+            "_raw_params": "powershell.exe -",
+            "argv": null,
+            "chdir": null,
+            "cmd": null,
+            "creates": null,
+            "output_encoding_override": null,
+            "removes": null,
+            "stdin": "imgpkg pull -b \"192.168.2.10/siims/imgpkgbundle:v1.1.0\" -o C:\\downloads\\imgpkgbundle\\v1.1.0 --registry-username Developer1 --registry-password Developer1"
+        }
+    },
+    "rc": 0,
+    "start": "2024-07-26 11:19:25.951051",
+    "stderr": "",
+    "stderr_lines": [],
+    "stdout": "",
+    "stdout_lines": []
+}
+2024-07-26 07:27:36,735 p=1350626 u=dimanator n=ansible | TASK [Unzip package] ******************************************************************************************************************************************************************************
+2024-07-26 07:27:36,800 p=1350626 u=dimanator n=ansible | Using module file /home/dimanator/.ansible/collections/ansible_collections/ansible/windows/plugins/modules/win_command.ps1
+2024-07-26 07:27:36,801 p=1350626 u=dimanator n=ansible | Pipelining is enabled.
+2024-07-26 07:27:36,811 p=1350626 u=dimanator n=ansible | <192.168.2.71> ESTABLISH WINRM CONNECTION FOR USER: dimanator on PORT 5985 TO 192.168.2.71
+2024-07-26 07:27:36,890 p=1350626 u=dimanator n=ansible | EXEC (via pipeline wrapper)
+2024-07-26 07:29:00,352 p=1350626 u=dimanator n=ansible | changed: [192.168.2.71] => {
+    "changed": true,
+    "cmd": "powershell.exe -",
+    "delta": "0:01:22.555207",
+    "end": "2024-07-26 11:28:40.051777",
+    "invocation": {
+        "module_args": {
+            "_raw_params": "powershell.exe -",
+            "argv": null,
+            "chdir": null,
+            "cmd": null,
+            "creates": null,
+            "output_encoding_override": null,
+            "removes": null,
+            "stdin": "Expand-Archive -Path \"C:\\downloads\\imgpkgbundle\\v1.1.0\\install.zip\" -DestinationPath \"C:\\deployment\\imgpkgbundle\\v1.1.0\""
+        }
+    },
+    "rc": 0,
+    "start": "2024-07-26 11:27:17.496570",
+    "stderr": "",
+    "stderr_lines": [],
+    "stdout": "",
+    "stdout_lines": []
+}
+2024-07-26 07:29:00,385 p=1350626 u=dimanator n=ansible | PLAY RECAP ****************************************************************************************************************************************************************************************
+2024-07-26 07:29:00,386 p=1350626 u=dimanator n=ansible | 192.168.2.71               : ok=2    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-07-26 07:56:24,892 p=1352126 u=dimanator n=ansible | playbook: /home/dimanator/code/ansiblebasic/service.yml
+2024-07-26 07:59:31,234 p=1352276 u=dimanator n=ansible | playbook: /home/dimanator/code/ansiblebasic/service.yml
+2024-07-26 07:59:43,410 p=1352304 u=dimanator n=ansible | playbook: /home/dimanator/code/ansiblebasic/service.yml
+2024-07-26 08:00:23,853 p=1352345 u=dimanator n=ansible | playbook: /home/dimanator/code/ansiblebasic/service.yml
+2024-07-26 09:16:24,763 p=1355380 u=dimanator n=ansible | ansible-playbook [core 2.14.14]
+  config file = /home/dimanator/code/ansiblebasic/ansible.cfg
+  configured module search path = ['/home/dimanator/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3.9/site-packages/ansible
+  ansible collection location = /home/dimanator/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/bin/ansible-playbook
+  python version = 3.9.18 (main, May 16 2024, 00:00:00) [GCC 11.4.1 20231218 (Red Hat 11.4.1-3)] (/usr/bin/python3)
+  jinja version = 3.1.2
+  libyaml = True
+2024-07-26 09:16:24,764 p=1355380 u=dimanator n=ansible | Using /home/dimanator/code/ansiblebasic/ansible.cfg as config file
+2024-07-26 09:16:24,776 p=1355380 u=dimanator n=ansible | host_list declined parsing /home/dimanator/code/ansiblebasic/hosts as it did not pass its verify_file() method
+2024-07-26 09:16:24,776 p=1355380 u=dimanator n=ansible | script declined parsing /home/dimanator/code/ansiblebasic/hosts as it did not pass its verify_file() method
+2024-07-26 09:16:24,777 p=1355380 u=dimanator n=ansible | auto declined parsing /home/dimanator/code/ansiblebasic/hosts as it did not pass its verify_file() method
+2024-07-26 09:16:24,781 p=1355380 u=dimanator n=ansible | Parsed /home/dimanator/code/ansiblebasic/hosts inventory source with ini plugin
+2024-07-26 09:16:25,150 p=1355380 u=dimanator n=ansible | Skipping callback 'default', as we already have a stdout callback.
+2024-07-26 09:16:25,150 p=1355380 u=dimanator n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2024-07-26 09:16:25,151 p=1355380 u=dimanator n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2024-07-26 09:16:25,151 p=1355380 u=dimanator n=ansible | PLAYBOOK: service.yml **************************************************************************************************************************************************************************************
+2024-07-26 09:16:25,151 p=1355380 u=dimanator n=ansible | 1 plays in service.yml
+2024-07-26 09:16:25,154 p=1355380 u=dimanator n=ansible | PLAY [Deploy bundle] ***************************************************************************************************************************************************************************************
+2024-07-26 09:16:25,252 p=1355380 u=dimanator n=ansible | TASK [Pull registry bundle] ********************************************************************************************************************************************************************************
+2024-07-26 09:16:25,331 p=1355380 u=dimanator n=ansible | skipping: [192.168.2.71] => {
+    "changed": false,
+    "skip_reason": "Conditional result was False"
+}
+2024-07-26 09:16:25,339 p=1355380 u=dimanator n=ansible | TASK [Unzip package to deployment folder] ******************************************************************************************************************************************************************
+2024-07-26 09:16:25,388 p=1355380 u=dimanator n=ansible | skipping: [192.168.2.71] => {
+    "changed": false,
+    "skip_reason": "Conditional result was False"
+}
+2024-07-26 09:16:25,401 p=1355380 u=dimanator n=ansible | TASK [Pull registry bundle to deployment folder] ***********************************************************************************************************************************************************
+2024-07-26 09:16:25,515 p=1355380 u=dimanator n=ansible | Using module file /home/dimanator/.ansible/collections/ansible_collections/ansible/windows/plugins/modules/win_command.ps1
+2024-07-26 09:16:25,516 p=1355380 u=dimanator n=ansible | Pipelining is enabled.
+2024-07-26 09:16:25,527 p=1355380 u=dimanator n=ansible | <192.168.2.71> ESTABLISH WINRM CONNECTION FOR USER: dimanator on PORT 5985 TO 192.168.2.71
+2024-07-26 09:16:25,604 p=1355380 u=dimanator n=ansible | EXEC (via pipeline wrapper)
+2024-07-26 09:26:13,752 p=1355380 u=dimanator n=ansible | changed: [192.168.2.71] => {
+    "changed": true,
+    "cmd": "powershell.exe -",
+    "delta": "0:09:47.264004",
+    "end": "2024-07-26 13:25:53.323800",
+    "invocation": {
+        "module_args": {
+            "_raw_params": "powershell.exe -",
+            "argv": null,
+            "chdir": null,
+            "cmd": null,
+            "creates": null,
+            "output_encoding_override": null,
+            "removes": null,
+            "stdin": "imgpkg pull -b \"192.168.2.10/siims/imgpkgbundle:v1.2.0\" -o \"C:\\deployment\\imgpkgbundle\\v1.2.0\" --registry-username Developer1 --registry-password Developer1"
+        }
+    },
+    "rc": 0,
+    "start": "2024-07-26 13:16:06.059795",
+    "stderr": "",
+    "stderr_lines": [],
+    "stdout": "",
+    "stdout_lines": []
+}
+2024-07-26 09:26:13,789 p=1355380 u=dimanator n=ansible | PLAY RECAP *************************************************************************************************************************************************************************************************
+2024-07-26 09:26:13,789 p=1355380 u=dimanator n=ansible | 192.168.2.71               : ok=1    changed=1    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2024-07-26 10:18:07,353 p=1357871 u=dimanator n=ansible | playbook: /home/dimanator/code/ansiblebasic/service.yml
+2024-07-26 10:27:31,091 p=1358240 u=dimanator n=ansible | playbook: /home/dimanator/code/ansiblebasic/service.yml
+2024-07-26 10:27:52,430 p=1358283 u=dimanator n=ansible | ansible-playbook [core 2.14.14]
+  config file = /home/dimanator/code/ansiblebasic/ansible.cfg
+  configured module search path = ['/home/dimanator/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3.9/site-packages/ansible
+  ansible collection location = /home/dimanator/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/bin/ansible-playbook
+  python version = 3.9.18 (main, May 16 2024, 00:00:00) [GCC 11.4.1 20231218 (Red Hat 11.4.1-3)] (/usr/bin/python3)
+  jinja version = 3.1.2
+  libyaml = True
+2024-07-26 10:27:52,430 p=1358283 u=dimanator n=ansible | Using /home/dimanator/code/ansiblebasic/ansible.cfg as config file
+2024-07-26 10:27:52,443 p=1358283 u=dimanator n=ansible | host_list declined parsing /home/dimanator/code/ansiblebasic/hosts as it did not pass its verify_file() method
+2024-07-26 10:27:52,443 p=1358283 u=dimanator n=ansible | script declined parsing /home/dimanator/code/ansiblebasic/hosts as it did not pass its verify_file() method
+2024-07-26 10:27:52,444 p=1358283 u=dimanator n=ansible | auto declined parsing /home/dimanator/code/ansiblebasic/hosts as it did not pass its verify_file() method
+2024-07-26 10:27:52,448 p=1358283 u=dimanator n=ansible | Parsed /home/dimanator/code/ansiblebasic/hosts inventory source with ini plugin
+2024-07-26 10:27:52,804 p=1358283 u=dimanator n=ansible | Skipping callback 'default', as we already have a stdout callback.
+2024-07-26 10:27:52,804 p=1358283 u=dimanator n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2024-07-26 10:27:52,805 p=1358283 u=dimanator n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2024-07-26 10:27:52,805 p=1358283 u=dimanator n=ansible | PLAYBOOK: service.yml **************************************************************************************************************************************************************************************
+2024-07-26 10:27:52,805 p=1358283 u=dimanator n=ansible | 1 plays in service.yml
+2024-07-26 10:27:52,808 p=1358283 u=dimanator n=ansible | PLAY [Deploy bundle] ***************************************************************************************************************************************************************************************
+2024-07-26 10:27:52,899 p=1358283 u=dimanator n=ansible | TASK [Pull registry bundle] ********************************************************************************************************************************************************************************
+2024-07-26 10:27:52,960 p=1358283 u=dimanator n=ansible | skipping: [192.168.2.71] => {
+    "changed": false,
+    "skip_reason": "Conditional result was False"
+}
+2024-07-26 10:27:52,970 p=1358283 u=dimanator n=ansible | TASK [Unzip package to deployment folder] ******************************************************************************************************************************************************************
+2024-07-26 10:27:53,004 p=1358283 u=dimanator n=ansible | skipping: [192.168.2.71] => {
+    "changed": false,
+    "skip_reason": "Conditional result was False"
+}
+2024-07-26 10:27:53,019 p=1358283 u=dimanator n=ansible | TASK [Pull registry bundle to deployment folder] ***********************************************************************************************************************************************************
+2024-07-26 10:27:53,110 p=1358283 u=dimanator n=ansible | Using module file /home/dimanator/.ansible/collections/ansible_collections/ansible/windows/plugins/modules/win_command.ps1
+2024-07-26 10:27:53,112 p=1358283 u=dimanator n=ansible | Pipelining is enabled.
+2024-07-26 10:27:53,123 p=1358283 u=dimanator n=ansible | <192.168.2.71> ESTABLISH WINRM CONNECTION FOR USER: dimanator on PORT 5985 TO 192.168.2.71
+2024-07-26 10:27:53,245 p=1358283 u=dimanator n=ansible | EXEC (via pipeline wrapper)
+2024-07-26 10:37:23,263 p=1358283 u=dimanator n=ansible | changed: [192.168.2.71] => {
+    "changed": true,
+    "cmd": "powershell.exe -",
+    "delta": "0:09:08.954045",
+    "end": "2024-07-26 14:37:02.751586",
+    "invocation": {
+        "module_args": {
+            "_raw_params": "powershell.exe -",
+            "argv": null,
+            "chdir": null,
+            "cmd": null,
+            "creates": null,
+            "output_encoding_override": null,
+            "removes": null,
+            "stdin": "imgpkg pull -b \"192.168.2.10/siims/siims:v1.2.0\" -o \"D:\\deployment\\siims\\v1.2.0\" --registry-username Developer1 --registry-password Developer1"
+        }
+    },
+    "rc": 0,
+    "start": "2024-07-26 14:27:53.797541",
+    "stderr": "",
+    "stderr_lines": [],
+    "stdout": "",
+    "stdout_lines": []
+}
+2024-07-26 10:37:23,294 p=1358283 u=dimanator n=ansible | PLAY RECAP *************************************************************************************************************************************************************************************************
+2024-07-26 10:37:23,295 p=1358283 u=dimanator n=ansible | 192.168.2.71               : ok=1    changed=1    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   

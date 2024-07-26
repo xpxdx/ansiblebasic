@@ -3,15 +3,32 @@
   hosts: all
   gather_facts: off
   vars:
-    file_version: 2023.05.09
+    image_version: v1.2.0
+    project: siims
+    registry: 192.168.2.10
+    image_name: siims
+    registry_username: Developer1
+    registry_password: Developer1
+    image_destination: C:\downloads\{{ image_name }}\{{ image_version }}
+    package_zip: install.zip
+    deployment_folder: D:\deployment
+    use_zip: false
 
   tasks:
-  # - name: Unzip bundle
-  #   ansible.windows.win_command: powershell.exe -
-  #   args: 
-  #     stdin: Expand-Archive -Path "C:\downloads\rel.{{ file_version }}.zip" -DestinationPath "C:\deployment\{{ file_version }}"
-
   - name: Pull registry bundle
     ansible.windows.win_command: powershell.exe -
     args: 
-      stdin: imgpkg pull -b 192.168.2.10/siims/imgpkgbundle:v1.0.0 -o c:\deployment\imgpkgbundle-pulled --registry-username Developer1 --registry-password Developer1
+      stdin: imgpkg pull -b "{{ registry }}/{{ project }}/{{ image_name }}:{{ image_version }}" -o {{ image_destination }} --registry-username {{ registry_username }} --registry-password {{ registry_password }}
+    when: use_zip == true
+
+  - name: Unzip package to deployment folder
+    ansible.windows.win_command: powershell.exe -
+    args: 
+      stdin: Expand-Archive -Path "{{  image_destination  }}\{{ package_zip }}" -DestinationPath "{{ deployment_folder }}\{{ image_name }}\{{ image_version }}"
+    when: use_zip == true
+
+  - name: Pull registry bundle to deployment folder
+    ansible.windows.win_command: powershell.exe -
+    args: 
+      stdin: imgpkg pull -b "{{ registry }}/{{ project }}/{{ image_name }}:{{ image_version }}" -o "{{ deployment_folder }}\{{ image_name }}\{{ image_version }}" --registry-username {{ registry_username }} --registry-password {{ registry_password }}
+    when: use_zip == false
