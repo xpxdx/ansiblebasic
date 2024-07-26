@@ -6,7 +6,12 @@
     file_version: 2023.05.09
 
   tasks:
-  - name: Unzip bundle
+  # - name: Unzip bundle
+  #   ansible.windows.win_command: powershell.exe -
+  #   args: 
+  #     stdin: Expand-Archive -Path "C:\downloads\rel.{{ file_version }}.zip" -DestinationPath "C:\deployment\{{ file_version }}"
+
+  - name: Pull registry bundle
     ansible.windows.win_command: powershell.exe -
     args: 
-      stdin: Expand-Archive -Path "C:\downloads\rel.{{ file_version }}.zip" -DestinationPath "C:\deployment\{{ file_version }}"
+      stdin: imgpkg pull -b 192.168.2.10/siims/imgpkgbundle:v1.0.0 -o c:\deployment\imgpkgbundle-pulled --registry-username Developer1 --registry-password Developer1
